@@ -1,4 +1,5 @@
 ﻿using QuizBattle.Console;
+using QuizBattle.Domain;
 
 var questions = QuestionUtils.SeedQuestions();
 
@@ -10,8 +11,12 @@ Console.WriteLine("Tryck valfri tangent för att starta...");
 Console.ReadKey(true);
 Console.WriteLine();
 
-foreach(var question in questions.Take(3))
+var score = 0;
+var asked = 0;
+
+foreach (Question question in questions.Take(3))
 {
+    asked++;
     QuestionUtils.DisplayQuestion();
     int answer = QuestionUtils.GetAnswer();
 
