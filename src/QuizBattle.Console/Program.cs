@@ -2,10 +2,13 @@
 
 QuestionUtils.SeedQuestions();
 
-Console.WriteLine("Welcome to Quiz Battle!");
+Console.Title = "QuizBattle – Konsol (v.2 dag 1–2)";
+Console.WriteLine("Välkommen till QuizBattle!");
+Console.WriteLine("Detta är en minimal code‑along‑loop för dag 1–2 (3 frågor).");
+Console.WriteLine("Tryck valfri tangent för att starta...");
 
-Console.WriteLine("Quiz Battle regler:");
-Console.WriteLine("Svara på frågor korrekt för att tjäna poäng.");
+Console.ReadKey(true);
+Console.WriteLine();
 
 while (!QuestionUtils.IsCompleted())
 {
