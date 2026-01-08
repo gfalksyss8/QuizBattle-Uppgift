@@ -1,20 +1,20 @@
 ﻿using QuizBattle.Console;
 
-QuizUtils.SeedQuestions();
+QuestionUtils.SeedQuestions();
 
 Console.WriteLine("Welcome to Quiz Battle!");
 
 Console.WriteLine("Quiz Battle regler:");
 Console.WriteLine("Svara på frågor korrekt för att tjäna poäng.");
 
-while (!QuizUtils.IsCompleted())
+while (!QuestionUtils.IsCompleted())
 {
-    QuizUtils.DisplayQuestion();
-    int answer = QuizUtils.GetAnswer();
+    QuestionUtils.DisplayQuestion();
+    int answer = QuestionUtils.GetAnswer();
 
-    QuizUtils.CheckAnswer(answer);
+    QuestionUtils.CheckAnswer(answer);
 
-    QuizUtils.WriteStatus();
+    QuestionUtils.WriteStatus();
 }
 
 Console.WriteLine("Tack för att du spelade Quiz Battle!");

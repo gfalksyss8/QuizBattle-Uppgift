@@ -2,7 +2,7 @@
 
 namespace QuizBattle.Console;
 
-public class QuizUtils
+public class QuestionUtils
 {
     private static List<Question> _questions = new();
 
