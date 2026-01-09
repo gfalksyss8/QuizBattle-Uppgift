@@ -41,22 +41,37 @@ public class QuestionUtils
 
     public static List<Question> SeedQuestions()
     {
-        List<Question> questions = new();
-        
-        Choice[] choices = {
-                new Choice("Q1.1", "Två ben"),
-                new Choice("Q1.2", "Tre ben"),
-                new Choice("Q1.3","Fyra ben")
-        };
-        questions.Add(new Question("Hur många ben har en hund?", choices, "Q1.3"));
-        Choice[] choices2 = {
-            new Choice("Q2.1", "Fyra ben"),
-            new Choice("Q2.2", "Åtta ben"),
-            new Choice("Q2.3", "Tio ben"),
-            new Choice("Q2.4", "Tolv ben")
-        };
-        questions.Add(new Question("Hur många ben har en spindel?", choices2, "Q2.2"));
+        return new List<Question>
+            {
+                new Question(
+                    text: "Q.CS.001", "Vad gör 'using'-statement i C#?",
+                    choices: new Choice[]
+                    {
+                        new Choice("Q.CS.001.A","Skapar en ny tråd"),
+                        new Choice("Q.CS.001.B","Säkerställer korrekt Dispose av resurser"),
+                        new Choice("Q.CS.001.C","Importerar ett NuGet-paket")
+                    },
+                    correctAnswerCode: "Q.CS.001.B"),
 
-        return questions;
+                new Question(
+                    "Q.CS.002", "Vad innebär 'var' i C#?",
+                    new[]
+                    {
+                        new Choice("Q.CS.002.A","Dynamisk typ vid runtime"),
+                        new Choice("Q.CS.002.B","Implicit, men statisk, typinferens vid compile-time"),
+                        new Choice("Q.CS.002.C","Alias för object")
+                    },
+                    "Q.CS.002.B"),
+
+                new Question(
+                    "Q.OOP.011", "Vad beskriver inkapsling bäst?",
+                    new[]
+                    {
+                        new Choice("Q.OOP.011.A","Göm implementation, exponera kontrollerat gränssnitt"),
+                        new Choice("Q.OOP.011.B","Ärva från flera basklasser"),
+                        new Choice("Q.OOP.011.C","Skapa statiska metoder")
+                    },
+                    "Q.OOP.011.A", category: "OOP", difficulty: 1)
+            };
     }
 }

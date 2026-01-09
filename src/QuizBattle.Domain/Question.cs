@@ -3,14 +3,16 @@ namespace QuizBattle.Domain;
 
 public  class Question
 {
-    public Question(string text, Choice[] choices, string correctAnswerCode)
+    public Question(string code, string text, Choice[] choices, string correctAnswerCode)
     {
+        Code = code?.Trim()!;
         Text = text?.Trim()!;
         Choices = choices?.ToList()!;
         CorrectAnswerCode = correctAnswerCode;
         EnsureValid();
     }
 
+    public string Code { get; }
     public string Text { get; }
     public List<Choice> Choices { get; }
     public string CorrectAnswerCode { get; }
