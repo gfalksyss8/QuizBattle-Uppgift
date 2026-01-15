@@ -8,5 +8,10 @@ namespace QuizBattle.Application.Features.AnswerQuestion
 {
     public class AnswerQuestionResult
     {
+        public AnswerQuestionResult(bool isCorrect)
+        {
+            IsCorrect = isCorrect;
+        }
+        public bool IsCorrect { get; }
     }
 }

@@ -8,5 +8,12 @@ namespace QuizBattle.Application.Features.FinishSession
 {
     public class FinishQuizResult
     {
+        public FinishQuizResult(int score, int answeredCount)
+        {
+            Score = score;
+            AnsweredCount = answeredCount;
+        }
+        public int Score { get; }
+        public int AnsweredCount { get; }
     }
 }
