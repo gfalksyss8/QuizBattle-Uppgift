@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using QuizBattle.Application.Features.AnswerQuestion;
+using QuizBattle.Application.Features.StartSession;
 using QuizBattle.Application.Interfaces;
 using QuizBattle.Application.Services;
 
@@ -10,6 +12,10 @@ namespace QuizBattle.Application.Extensions
         {
             services.AddSingleton<IQuestionService, QuestionService>();
             services.AddSingleton<ISessionService, SessionService>();
+
+            // Session handlers
+            services.AddScoped<StartQuizHandler>();
+            services.AddScoped<AnswerQuestionHandler>();
 
             return services;
         }

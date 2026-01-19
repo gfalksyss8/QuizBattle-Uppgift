@@ -1,4 +1,5 @@
 ﻿using QuizBattle.Application.Services;
+using QuizBattle.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,12 @@ namespace QuizBattle.Application.Features.StartSession
 {
     public class StartQuizResult
     {
-        public StartQuizResult(Guid sessionId, IEnumerable<Domain.Question> questions)
+        public StartQuizResult(Guid sessionId, IReadOnlyList<Question> questions)
         {
             SessionId = sessionId;
             Questions = questions;
         }
         public Guid SessionId { get; }
-        public IEnumerable<Domain.Question> Questions { get; set; }
-        }
+        public IReadOnlyList<Question> Questions { get; }
+    }
 }
