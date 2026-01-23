@@ -1,13 +1,14 @@
 # API‑kontrakt – kort återaktivering
 
 ## Begreppskarta
+
 ```mermaid
 mindmap
   root((API-kontrakt))
     Resurs
-      sessions
-      questions
-      answers
+      QuizSessions
+      Questions
+      Answers
     Representation
       JSON
     Statuskoder
@@ -17,7 +18,7 @@ mindmap
       404 Not Found
       409 Conflict
     Felobjekt
-      { error, message/details }
+      error, message/details
 ````
 
 ## Kontraktets delar

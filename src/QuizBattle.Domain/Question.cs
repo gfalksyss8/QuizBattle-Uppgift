@@ -31,6 +31,9 @@ namespace QuizBattle.Domain
         public string? Category { get; set; }
         public int? Difficulty { get; set; }
 
+        // navigation-property
+        public ICollection<Answer> Answers { get; set; }
+
         public bool IsCorrect(string selectedChoiceCode) =>
             string.Equals(selectedChoiceCode, CorrectAnswerCode, StringComparison.OrdinalIgnoreCase);
 

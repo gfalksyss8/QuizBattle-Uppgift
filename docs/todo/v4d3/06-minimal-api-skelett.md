@@ -7,6 +7,7 @@ Skapa en **tunn** Program.cs som:
 - returnerar korrekta statuskoder/felobjekt.
 
 ## Flöde
+
 ```mermaid
 sequenceDiagram
   participant C as Klient
@@ -37,4 +38,3 @@ sequenceDiagram
 
 *   [ ] API startar
 *   [ ] Swagger visar 4 endpoints
-

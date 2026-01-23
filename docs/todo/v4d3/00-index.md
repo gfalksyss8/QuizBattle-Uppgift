@@ -1,6 +1,3 @@
-## `00-index.md`
-
-````markdown
 # V4D3 – API‑kontrakt med Minimal API (översikt)
 
 ## Syfte
@@ -16,10 +13,11 @@ Efter passet ska du kunna:
 - Repetition av EF Core‑krav på entiteter (param‑lös ctor, public set, PK/FK, navigationer)
 
 ## Vad vi bygger idag (lager för lager)
+
 ```mermaid
 flowchart LR
   Client[Klient/HTTP] --> API[Minimal API]
-  API --> App[Application (Use Cases)]
+  API --> App[Application/Use Cases]
   App --> Dom[Domain]
   App --> Repo[Repos]
   Repo --> DB[(SQLite)]
