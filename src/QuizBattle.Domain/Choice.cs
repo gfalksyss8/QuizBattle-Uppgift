@@ -7,13 +7,16 @@ namespace QuizBattle.Domain
     {
         public Choice(string code, string option)
         {
-            Id = Guid.NewGuid();
             Code = code;
             Text = option;
             EnsureValid();
         }
 
-        public Guid Id { get; set; }
+        protected Choice() { }// default konstruktor behövs av EF Core
+
+        public int Id { get; set; } // PK för Choice
+        public int QuestionId { get; set; } // FK för Question
+        public Question Question { get; set; }
         public string Code { get; set; }
         public string Text { get; set; }
 

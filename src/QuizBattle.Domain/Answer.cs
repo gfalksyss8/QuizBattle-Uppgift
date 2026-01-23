@@ -10,6 +10,10 @@ namespace QuizBattle.Domain
             EnsureValid();
         }
 
+        protected Answer() { } // default konstruktor behövs av EF Core
+
+        public int Id { get; set; } // PK för Answer
+        public int QuestionId { get; set; } // FK till Question
         public Question Question { get; set; }
         public string SelectedChoiceCode { get; set; }
         public DateTime AnsweredAtUtc { get; set; }

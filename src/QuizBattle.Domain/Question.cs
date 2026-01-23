@@ -24,9 +24,14 @@ namespace QuizBattle.Domain
             EnsureValid();
         }
 
+        protected Question() { 
+            Choices = new List<Choice>(); // antingen här
+        }
+
+        public int Id { get; set; }
         public string Code { get; set; }
         public string Text { get; set; }
-        public List<Choice> Choices { get; set; }
+        public List<Choice> Choices { get; set; } = new List<Choice>(); // eller här
         public string CorrectAnswerCode { get; set; }
         public string? Category { get; set; }
         public int? Difficulty { get; set; }

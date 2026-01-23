@@ -48,8 +48,8 @@ classDiagram
 
 ## Checklista
 
-*   [ ] Lagt till `Id` på `Question` och `Answer`
-*   [ ] Lagt till `QuestionId` + `Question` på `Choice` och `Answer`
-*   [ ] Parameterlös ctor på alla
-*   [ ] Samlingsnavigationer initierade
-*   [ ] Validering flyttad från ctor till metod/fabrik
+*   [x] Lagt till `Id` på `Question` och `Answer`
+*   [x] Lagt till `QuestionId` + `Question` på `Choice` och `Answer`
+*   [x] Parameterlös ctor på alla
+*   [x] Samlingsnavigationer initierade
+*   [x] Validering flyttad från ctor till metod/fabrik
