@@ -13,13 +13,9 @@ namespace QuizBattle.Domain
             EnsureValid();
         }
 
-
-
-
-
-        public Guid Id { get; }
-        public string Code { get; }
-        public string Text { get; }
+        public Guid Id { get; set; }
+        public string Code { get; set; }
+        public string Text { get; set; }
 
         private void EnsureValid()
         {
